@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# A script that creates a private key with specifications
-ssh-keygen -t school -b 4096 -C "betty"
+# A script that creates a private key with some specification"
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -N "betty" -C "Key for school"
