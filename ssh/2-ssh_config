@@ -1,0 +1,4 @@
+onfigure server to accept connection without password
+Host * 
+        IdentityFile ~/.ssh/school
+        PasswordAuthentication no
