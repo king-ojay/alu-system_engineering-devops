@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configuring  Nginx server so that /redirect_me is redirecting to another page.
+
+apt-get -y update
+apt-get -y install nginx
+ufw allow  'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
+sed -i '/^\tserver_name.*/a \\trewrite ^/redirect_me https://www.treasureglobalconcepticom.ng/ permanent;' /etc/nginx/sites-available/default 
+service nginx restart
